@@ -31,7 +31,7 @@ Voir les thèmes **flooor-simple**, **flooor-notebook** : bientôt disponible ic
 - Mise à disposition d'une sidebar dite principale
 - Fonctionnalités php additionnelles dans dossier inc/ pour :
     - sécuriser l'installation : *inc/securize-wordpress.php*
-    - ~~optimiser l'installation : *inc/optimize-wordpress.php*~~ (supprimé du thème et déplacé dans un plugin **flooor-init-project**)
+    - ~~optimiser l'installation : *inc/optimize-wordpress.php*~~ (supprimé du thème et déplacé dans un plugin [flooor-init-project](https://github.com/VBlankSB/flooor-init-project))
     - customiser le header : *inc/custom-header.php*
     - alléger les fichiers de template et éviter les duplications de code: *inc/template-tags.php*
     - modifier la façon dont s'ajoute les thumbnails et les commentaires: *inc/template-functions.php*
