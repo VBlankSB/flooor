@@ -1,0 +1,84 @@
+// Icones ajoutés à divers endroits du theme via genericons
+
+// Implémentation générale pour éviter de se répéter dans le code
+.entry-format:before,
+.posted-on:before,
+.updated-on:before,
+.author:before,
+.cat-links:before,
+.cat-names:before,
+.tags-links:before,
+.post-edit-link:before,
+.comments-link:before,
+.comments-number:before {
+	// same rules as .genericon in genericons.css
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+	line-height: 1;
+	font-family: 'Genericons';
+	text-decoration: inherit;
+	font-weight: normal;
+	font-style: normal;
+	vertical-align: top;
+	color: $black;
+	content: "\f406"; // grosse croix par défaut pour détecter ou on en a besoin
+
+	// Possible ajouts
+	// Synthèse vocale normal, none, spell-out
+	// http://stylescss.free.fr/speak.php - https://www.w3schools.com/cssref/css_ref_aural.asp
+	//speak: none;
+	//font-variant: normal; // normal is default value can be small-caps
+	//text-align: center;
+	//text-transform: none;
+}
+
+
+// Social icones for menu social
+//==============================
+.menu-social li {
+	a:before {
+		display: inline-block;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-family: 'Genericons';
+		content: "\f406"; // grosse croix par défaut pour détecter ou on en a besoin
+	}
+
+	a[href*="twitter.com"]::before { content: '\f202';}
+	a[href*="facebook.com"]::before { content: '\f204';}
+	a[href*="codepen.io"]::before { content: '\f216';}
+	a[href*="github.com"]::before { content: '\f200';}
+	a[href*="dribble.com"]::before { content: '\f201';}
+	a[href*="pinterest.com"]::before { content: '\f209';}
+	a[href*="youtube.com"]::before { content: '\f213';}
+	a[href*="instagram.com"]::before { content: '\f215';}
+	a[href*="mailto"]::before { content: '\f410';}
+	a[href*="/feed"]::before { content: '\f413';}
+}
+
+// Icones selon le post format
+//=================================
+// <article <?php post_class(); ?> post_class ajoute dynamiquement .format-XXX pour les differencier
+.format-aside .entry-format:before {content: "\f101"; vertical-align: middle;}
+.format-image .entry-format:before {content: "\f473"; vertical-align: middle;}
+.format-gallery .entry-format:before {content: "\f103"; vertical-align: middle;}
+.format-video .entry-format:before {content: "\f104"; vertical-align: middle;}
+.format-status .entry-format:before {content: "\f105"; vertical-align: middle;}
+.format-quote .entry-format:before {content: "\f106"; vertical-align: middle;}
+.format-link .entry-format:before {content: "\f107"; vertical-align: middle;}
+.format-chat .entry-format:before {content: "\f108"; vertical-align: middle;}
+.format-audio .entry-format:before {content: "\f109"; vertical-align: middle;}
+
+// Icones partie meta des articles
+//=================================
+.posted-on:before { content: "\f303"; vertical-align: middle; }
+.updated-on:before { content: "\f420"; vertical-align: middle; }
+.author:before { content: "\f304"; vertical-align: middle;}
+.cat-links:before, .cat-names:before { content: "\f301"; vertical-align: middle;}
+.tags-links:before { content: "\f302"; vertical-align: middle;}
+.post-edit-link:before { content: "\f411"; vertical-align: middle;}
+.comments-link:before, .comments-number:before { content: "\f300"; vertical-align: middle;}

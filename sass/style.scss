@@ -1,0 +1,135 @@
+@charset "utf-8";
+/*!
+Theme Name: Flooor
+Theme URI: http://pixiscreen.fr
+Author: VBlank
+Author URI: http://pixiscreen.fr
+Description: Theme starter for theme developpement based on Underscores
+Version: 2.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: flooor
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Flooor is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Flooor like Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1 - Css shared
+2 - Vendors = for some external code like library
+3 - Base
+	3.1 - Normalize and reset soft
+	3.2 - Typography
+	3.3 - Typography
+	3.4 - Elements
+	3.5 - WordPress classes
+	3.6 - Animations = keyframes
+4 - Components
+	4.1 - Components Accessibility
+	4.2 - Components to perform User Experience
+	4.3 - Components icones with Genericons
+	4.4 - Components Infinite Scroll if Plugin Jetpack is used
+	4.5 - Classes Helper
+5 - Layout
+--------------------------------------------------------------*/
+
+// Inspired par les conventions Sass d'Hugo Giraudel
+// https://sass-guidelin.es/fr/
+// Voir aussi https://cssguidelin.es/ et https://github.com/airbnb/css
+
+/*==============================================================
+1 Css shared comes from placeholder.scss to be DRY
+==============================================================*/
+@import 'abstracts/variables',
+				'abstracts/placeholders',
+				'abstracts/mixins';
+
+
+/*==============================================================
+2 Vendors
+==============================================================*/
+//@import 'vendors/normalize'; => Normalize Custom preferred
+/* Nothing for the moment */
+
+/*==============================================================
+3 Base
+==============================================================*/
+/* 3.1 Normalize and reset soft
+--------------------------------------------------------------*/
+@import 'base/normalize-custom',
+				'base/reset-soft',
+				'base/box-model';
+
+/* 3.2 Fonts
+--------------------------------------------------------------*/
+//@import 'base/fonts'; Rien pour le moment
+/* Nothing for the moment */
+
+/* 3.3 Typography
+--------------------------------------------------------------*/
+@import 'base/typography';
+
+/* 3.4 Elements
+--------------------------------------------------------------*/
+@import 'base/elements',
+				'base/forms';
+
+/* 3.5 Wordpress Classes
+--------------------------------------------------------------*/
+@import 'base/wp-classes';
+
+/* 3.6 Animations = keyframes
+--------------------------------------------------------------*/
+//@import 'base/animations'; Rien pour le moment
+/* Nothing for the moment */
+
+/*==============================================================
+4 Components
+==============================================================*/
+/* 4.1 - Components Accessibility
+--------------------------------------------------------------*/
+@import 'components/accessibility';
+
+/* 4.2 - Components to perform User Experience
+--------------------------------------------------------------*/
+@import 'components/ux';
+
+/* 4.3 - Components icones with Genericons
+--------------------------------------------------------------*/
+@import 'components/icons';
+
+/* 4.4 - Components Infinite Scroll if Plugin Jetpack is used
+--------------------------------------------------------------*/
+//@import 'infinite-scroll.scss';
+/* Nothing for the moment */
+
+/* 4.5 - Classes Helper
+--------------------------------------------------------------*/
+@import 'components/class-helper';
+
+
+/*==============================================================
+5 Layout
+==============================================================*/
+//@import 'layout/global'; Rien pour le moment
+/* Nothing for the moment */
+
+/*==============================================================-
+6 Pages
+==============================================================*/
+//@import 'pages/home'; Rien pour le moment
+/* Nothing for the moment */
+
+/*==============================================================
+7 Themes
+==============================================================*/
+//@import 'themes/default'; Rien pour le moment
+/* Nothing for the moment */

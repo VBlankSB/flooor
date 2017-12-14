@@ -1,0 +1,116 @@
+// -----------------------------------------------------------------------------
+// This file contains global basic styles for typography.
+// -----------------------------------------------------------------------------
+html {
+	/* set base font-size to equiv "10px", which is adapted to rem unit
+	 ~10px = 16px(default) * 0.625 */
+	font-size: 62.5%;
+	/* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+	/* thanks to  @7studio and @dawitti */
+	font-size: calc(1em * .625);
+	/* Keeps page centered in all browsers regardless of content height */
+	overflow-y: scroll;
+	/* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-webkit-text-size-adjust: 100%;
+	/* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+	-ms-text-size-adjust:     100%;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: $default-text-color;
+	font-family: $default-font-stack;
+	@include font-size($default-font-size);
+	line-height: 1.5; // Recommandation W3.org between 1.5 to 2 @link https://www.w3.org/TR/WCAG20-TECHS/C21.html
+}
+
+b,
+strong {
+	font-weight: 900;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote,
+q { /* https://www.w3schools.com/cssref/pr_gen_quotes.asp */
+	quotes: "\201C" "\201D";
+}
+
+address {
+	font-style: italic;
+}
+
+pre {
+	font-family: $pre-font-stack;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+}
+
+code,
+kbd,
+tt,
+var,
+samp {
+	font-family: $code-font-stack;
+	font-size: 15px;
+	font-size: 1.5rem;
+}
+
+abbr,
+acronym {
+	text-decoration: none;
+	border-bottom: 1px dotted $oc-gray-4;
+	cursor: help;
+}
+
+mark,
+ins {
+	// (opinionated) already colored with #ff0 in normalize
+	//background: $marker-bg-color;
+	// (opinionated) already colored with #000 in normalize
+	// color: #333;
+	text-decoration: none;
+}
+
+small {
+	font-size: 75%;
+}
+
+big {
+	font-size: 125%;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+h1 {
+	/* Normalize is 2em but because au rem unit must be changed here */
+	@include font-size($h1-font-size);
+}
+h2 {
+	@include font-size($h2-font-size);
+}
+h3 {
+	@include font-size($h3-font-size);
+}
+h4 {
+	@include font-size($h4-font-size);
+}

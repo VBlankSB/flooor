@@ -1,0 +1,51 @@
+// =============================================================================
+// This file contains all application-wide Sass mixins
+// =============================================================================
+// NB : Use placeholders rather than mixin when we don't need variables
+// Purpose : DRY (Don't Repeat Yourself)
+
+
+// MIXIN FOR CENTERING BLOCK (see later if it's better in placeholder !)
+// -----------------------------------------------------------------------------
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+// USAGE :
+//
+// .aligncenter {
+//   @include center-block;
+// }
+
+// MIXIN FOR FONT SIZE
+// -----------------------------------------------------------------------------
+// Set a rem font size with pixel fallback
+// base font-size in flooor is equiv "10px" : font-size:62.5% which is adapted to rem unit
+@mixin font-size($size) {
+  font-size: ($size * 1px); //Will be overridden if browser supports rem
+  font-size: ($size / 10) * 1rem;
+}
+// USAGE : Give value in px unit
+// p {
+//   @include font-size(16);
+// }
+
+// MIXIN FOR OPACITY cross-browser compatibility for IE5 to IE8
+// -----------------------------------------------------------------------------
+//
+// 1. for IE 5, 6 and 7
+// 2. for IE8
+// @param $opacity :  A number between 0 and 1, where 0 is transparent and 1 is opaque.
+// @link https://books.google.fr/books?id=aL8cBwAAQBAJ&pg=PA136&lpg=PA136&dq=filter:+progid:DXImageTransform.Microsoft.Alpha(Opacity%3D$value);&source=bl&ots=b1OfNHTWZC&sig=ImN2hrLS1XLrZ-t1393G9XBztFM&hl=fr&sa=X&ved=0ahUKEwid-bbdwc_UAhUlDcAKHe4wAxQQ6AEIPjAD#v=onepage&q=filter%3A%20progid%3ADXImageTransform.Microsoft.Alpha(Opacity%3D%24value)%3B&f=false
+//
+@mixin opacity($value) {
+  $opacity-ie: ($value * 100);
+  filter: alpha(opacity=#{$opacity-ie}); /* 1 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity-ie})"; /* 2 */
+  opacity: $value;
+}
+// USAGE
+// p {
+//   @include opacity(0.1);
+// }

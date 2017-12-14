@@ -1,0 +1,110 @@
+/*--------------------------------------------------------------
+	Global basic style for elements.
+--------------------------------------------------------------*/
+body {
+	/* Fallback for when there is no custom background color defined. */
+	background: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	@extend %breakword;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+/*blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}*/
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: $pre-bg-color; // (opinionated)
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+hr {
+	background-color: $hr-bg-color;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 0;
+	padding: 0 0 0 2em;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	/* Adhere to container width. */
+	max-width: 100%;
+	/* Make sure images are scaled correctly. */
+	height: auto;
+}
+
+figure {
+	/* Extra wide images within figure tags don't overflow the content area. */
+	margin: 1em 0;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+a {
+	color: $nav-text-color;
+	@extend %breakword;
+
+	&:visited {
+		color: $nav-text-color-visited;
+	}
+
+	&:hover, &:focus, &:active {
+		color: $nav-text-color-events;
+	}
+
+	&:hover, &:active {
+		/* IMPORTANT : Don't remove outline on focus for a11y !!! */
+		outline: 0;
+	}
+}
+
+// Media
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}

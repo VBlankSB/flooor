@@ -1,0 +1,19 @@
+/* Extend href link on parent DIV */
+// @link https://wabeo.fr/etendre-liens-javascript/#edit-en-css-cest-mieux
+
+[data-expand-target]{
+	overflow:hidden; // pour ne pas dépasser de la div
+	position:relative;
+}
+
+
+[data-expand-link]:after{
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:10;
+	margin:-50px; //-250px un peu trop grand
+}

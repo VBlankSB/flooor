@@ -1,0 +1,108 @@
+// =============================================================================
+// This file contains all application-wide Sass variables.
+// =============================================================================
+
+// FONTS
+//-------------------------------------------------------------
+// Fonts stacks can be "websafe" fonts : fonts installed on user's computer
+// @link http://www.cssfontstack.com/
+
+// If other fonts needed, we can use external fonts like on Google fonts :
+// @link https://fonts.google.com/
+// External Fonts like Google Fonts must be called in functions.php
+
+// On Flooor Theme Fonts are "websafe"
+
+/// Regular font family
+/// @type List
+$default-font-stack: Verdana, Geneva ,sans-serif !default; // Pile font large
+$alternative-font-stack: Tahoma, Helvetica, Arial, sans-serif !default; // Pile font etroite
+
+/// Specific font family
+/// @type List
+$quote-font-stack: Garamond, Baskerville, 'Hoefler Text', 'Times New Roman', serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$pre-font-stack: "Courier New", Courier, "Andale Mono", monospace !default;
+$code-font-stack: Monaco, Consolas, "Lucida Console", monospace !default;
+
+/// Default font-size for all web site
+$default-font-size: 16;
+
+/// Font sizes for titles
+$h1-font-size: 22;
+$h2-font-size: 18;
+$h3-font-size: 16;
+$h4-font-size: 14;
+
+// COLORS
+//-------------------------------------------------------------
+// Open Source Color Sheme
+// @link https://yeun.github.io/open-color/
+
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
+$white-like: rgb(241, 241, 241);
+
+$oc-gray-0: rgb(248, 249, 250);
+$oc-gray-1: rgb(241, 243, 245);
+$oc-gray-2: rgb(233, 236, 239);
+$oc-gray-3: rgb(222, 226, 230);
+$oc-gray-4: rgb(206, 212, 218);
+$oc-gray-5: rgb(173, 181, 189);
+$oc-gray-6: rgb(134, 142, 150);
+$oc-gray-7: rgb(73, 80, 87);
+$oc-gray-8: rgb(52, 58, 64);
+$oc-gray-9: rgb(33, 37, 41);
+
+$oc-blue-7: rgb(28, 124, 214);
+$oc-grape-7 : rgb(174, 62, 201);
+$oc-violet-9 : rgb(95, 61, 196);
+$oc-yellow-0: rgb(255, 249, 219);
+
+$base-color: rgb(33, 117, 155);
+
+// Aria focus color
+$aria-color: $base-color;
+
+// Text color variables
+$default-text-color: $oc-gray-7 !default;
+$input-text-color: $oc-gray-7 !default;
+$input-text-focused: $oc-gray-9 !default;
+
+$nav-text-color: $oc-blue-7 !default;
+$nav-text-color-visited: $oc-grape-7 !default;
+$nav-text-color-events: $oc-violet-9 !default;
+
+
+// Background and border variables
+$pre-bg-color: $oc-gray-2 !default;
+
+$input-bg-color: $oc-gray-2 !default;
+$input-border-color: $oc-gray-4 !default;
+$input-border-color-hover: $oc-gray-6 !default;
+$input-border-color-focus: $oc-gray-3 !default;
+
+$marker-bg-color: $oc-yellow-0 !default;
+$aria-bg-color-focus : $white-like !default;
+$hr-bg-color: $oc-gray-4 !default;
+
+
+// SIZES
+//-------------------------------------------------------------
+/// Container's maximum width and minimum width
+/// @type Length
+$max-width: 125em !default;
+$min-width: 20em !default;
+
+// Media Query
+//-------------------------------------------------------------
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;

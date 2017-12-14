@@ -1,0 +1,14 @@
+# NOTE: This file specifies intentionally untracked files to ignore
+# http://git-scm.com/docs/gitignore
+
+# ignore License and Changelog files
+*.txt
+
+# ignore style.css
+*.css
+
+# ignore Sass vendors scss
+sass/vendors/*.scss
+
+# ignore languages
+languages

@@ -1,0 +1,70 @@
+/*--------------------------------------------------------------
+  Global basic style for forms and button
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 2px solid;
+  border-color: $input-border-color;
+  border-radius: 3px;
+  background: $input-bg-color;
+  color: $input-text-color;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: .6em 1em .4em;
+  cursor: pointer;
+  &:hover {
+    border-color: $input-border-color-hover;
+  }
+  &:focus, &:active {
+    border-color: $input-border-color-focus;
+  }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: $input-text-color;
+	/* overide navigator style */
+	border: 1px solid $input-border-color;
+	border-radius: 3px;
+	padding: 0.7em;
+	width: 100%;
+
+	&:focus { //
+		/* Make focus more visible */
+		color: $input-text-focused;
+		-moz-box-shadow: 0 0 5px $aria-color;
+		-webkit-box-shadow: 0 0 5px $aria-color;
+		box-shadow: 0 0 5px $aria-color;
+		border: 1px solid $aria-color;
+	}
+}
+
+select {
+	border: 1px solid $input-border-color;
+}
+
+textarea {
+	width: 100%;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}

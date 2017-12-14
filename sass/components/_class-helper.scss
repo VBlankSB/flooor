@@ -1,0 +1,31 @@
+// Class helper
+//----------------------------------------------------
+.clear {
+	@extend %clearfix;
+}
+
+.like-h2 {
+  margin: 0;
+  text-transform: uppercase;
+  @include font-size($h2-font-size);
+  font-weight: 700;
+}
+.like-p {
+  @include font-size($default-font-size);
+  font-weight: normal;
+
+}
+/* helpfull to add this for ul or ol */
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* By default images are inline-block */
+.img-responsive {
+  display: block;
+}
+
+.btn {}
+
+// See https://www.sitepoint.com/sass-component-10-minutes/
