@@ -49,8 +49,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 1 Css shared comes from placeholder.scss to be DRY
 ==============================================================*/
 @import 'abstracts/variables',
-				'abstracts/placeholders',
-				'abstracts/mixins';
+'abstracts/placeholders',
+'abstracts/mixins';
 
 
 /*==============================================================
@@ -65,8 +65,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /* 3.1 Normalize and reset soft
 --------------------------------------------------------------*/
 @import 'base/normalize-custom',
-				'base/reset-soft',
-				'base/box-model';
+'base/reset-soft',
+'base/box-model';
 
 /* 3.2 Fonts
 --------------------------------------------------------------*/
@@ -80,7 +80,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /* 3.4 Elements
 --------------------------------------------------------------*/
 @import 'base/elements',
-				'base/forms';
+'base/forms';
 
 /* 3.5 Wordpress Classes
 --------------------------------------------------------------*/
