@@ -24,7 +24,8 @@ if ( post_password_required() ) {
 
 	<?php
 	// You can start editing here -- including this comment!
-	if ( have_comments() ) : ?>
+	if ( have_comments() ) :
+	?>
 		<h2 class="comments-title">
 			<?php
 				printf( // WPCS: XSS OK.
@@ -39,10 +40,10 @@ if ( post_password_required() ) {
 			<?php
 			// @link https://codex.wordpress.org/Function_Reference/wp_list_comments
 				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => false, // Set to False or True ???
+					'style'       => 'ol',
+					'short_ping'  => false, // Set to False or True ???
 					'avatar_size' => 56,
-					'callback' => 'flooor_custom_comment' // Modify outpout of comment with custom function See : inc/template-functions.php and learn more on @link https://digwp.com/2010/02/custom-comments-html-output/
+					'callback'    => 'flooor_custom_comment', // Modify outpout of comment with custom function See : inc/template-functions.php and learn more on @link https://digwp.com/2010/02/custom-comments-html-output/.
 				) );
 			?>
 		</ol><!-- .comment-list -->
@@ -64,23 +65,23 @@ if ( post_password_required() ) {
 
 
 	// If comments are closed and there are comments, let's leave a little note, shall we?
-	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-
+	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+	?>
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'flooor' ); ?></p>
 	<?php
 	endif;
 	// Need to have title_reply with p not h3 !!!!
-	// https://developer.wordpress.org/reference/functions/comment_form/
+	// https://developer.wordpress.org/reference/functions/comment_form/.
 	$comments_args = array(
-		// Change the title of the reply section
-      'title_reply' => __( 'Something to add ?  Your turn !', 'flooor' ),
-		// modify h3 to p
-			'title_reply_before' => '<p id="reply-title" class="comment-reply-title">',
-			'title_reply_after' => '</p>',
-		// Change the title of send button
-      'label_submit' => __( 'Send', 'flooor' ),
+		// Change the title of the reply section.
+		'title_reply'        => __( 'Something to add ?  Your turn !', 'flooor' ),
+		// modify h3 to p.
+		'title_reply_before' => '<p id="reply-title" class="comment-reply-title">',
+		'title_reply_after'  => '</p>',
+		// Change the title of send button.
+		'label_submit'       => __( 'Send', 'flooor' ),
 	);
-	comment_form($comments_args);
+	comment_form( $comments_args );
 	?>
 
 </div><!-- #comments -->
