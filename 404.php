@@ -22,12 +22,12 @@ get_header(); ?>
 					<p><?php esc_html_e( 'It looks like nothing was found at this location. Try a new search or maybe try one of the links below ?', 'flooor' ); ?></p>
 
 					<?php
-						get_search_form();
+					get_search_form();
 
-						the_widget( 'WP_Widget_Recent_Posts' );
+					the_widget( 'WP_Widget_Recent_Posts' );
 
-						// Only show the widget if site has multiple categories.
-						if ( flooor_categorized_blog() ) :
+					// Only show the widget if site has multiple categories.
+					if ( flooor_categorized_blog() ) :
 					?>
 
 					<div class="widget widget_categories">
