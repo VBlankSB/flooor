@@ -13,18 +13,26 @@ get_header(); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php
-		if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'flooor' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title">
+					<?php
+					/* translators: %$: the client request */
+					printf( esc_html__( 'Search Results for: %s', 'flooor' ), '<span>' . get_search_query() . '</span>' );
+					?>
+				</h1>
 
 				<?php global $wp_query; ?>
-				<p class="num-result"><?php printf( esc_html__( 'We have found %s results', 'flooor' ), $wp_query->found_posts ); ?></p>
+				<p class="num-result">
+					<?php
+					/* translators: %$: the number request results */
+					printf( esc_html__( 'We have found %s results', 'flooor' ), $wp_query->found_posts );
+					?>
+				</p>
 			</header><!-- .page-header -->
 
 			<?php
-			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
 				/**
