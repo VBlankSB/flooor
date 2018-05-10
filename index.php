@@ -17,12 +17,11 @@ get_header(); ?>
 <div class="container">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main" itemprop="mainContentOfPage">
-		
 		<?php
 		if ( have_posts() ) :
-	
 			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) :
+				the_post();
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -31,9 +30,8 @@ get_header(); ?>
 				 */
 				get_template_part( 'template-parts/content', get_post_format() );
 
-			endwhile; ?>
-			
-			<?php
+			endwhile;
+
 			// Previous/next page navigation set of posts, when applicable like this : « Prev 1 … 3 4 5 6 7 … 9 Next ».
 			the_posts_navigation();
 
@@ -41,7 +39,8 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+		endif;
+		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
